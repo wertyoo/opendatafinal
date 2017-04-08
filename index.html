@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Open Data BR</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <a class="navbar-brand" href="#">Open Data BR Example</a>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Welcome!</h1>
+            <p>Use this tool to find your lost pet in the Baton Rouge area!</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Find Your Animal</h2>
+                <p>Use the form to the right to find missing animals in Baton Rouge.</p>
+                <p><a class="btn btn-secondary" href="https://data.brla.gov/" role="button">Visit Open Data BR &raquo;</a></p>
+                <img class="animal-pic" src="http://www.insidedogsworld.com/wp-content/uploads/2016/10/dog-and-cat-1.jpg">
+            </div>
+            <div class="col-md-8">
+                <h2>Search:</h2>
+                <form id="animal-form" class="jumbotron">
+                    <div class="form-group">
+                        <label for="species">By Species:</label>
+                        <input type="text" class="form-control" id="species" name="species" placeholder="Ex. dog, cat, bird, wildlife">
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <form id="zipcode-form" class="jumbotron">
+                    <div class="form-group">
+                        <label for="zipcode">By Zip Code:</label>
+                        <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Ex. 70808">
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row results-bar">
+            <div class="col-md-12">
+                <h1>Results</h1>
+            </div>
+        </div>
+        <div class="row results">
+            <div class="col-md-12">
+                <p id="message">Search for something to see your results!</p>
+                <ul id="animal-list" class="list-group"></ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <p>&copy; Futures Fund 2017</p>
+        </footer>
+    </div>
+    <!-- /container -->
+
+</body>
+
+</html>
